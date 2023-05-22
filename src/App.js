@@ -5,7 +5,7 @@ function App() {
     <div>
     <h1>my app first  react</h1>
 
-    <p>this is paragraph 1</p>
+    <p>2 this is paragraph 1</p>
 
     <a href = "https://www.google.com/">google</a>
 
