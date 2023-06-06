@@ -1,30 +1,46 @@
 import { useState } from 'react';
 import './App.css';
-import Add from './component/Add.js';
-import { Sub, Multi } from './component/Sub.js';
-Add()
-Sub()
-Multi()
-console.log('App js');
+import Add from './component/Add';
+// import Sub from './component/Sub';
+// Add()
+// Sub()
+// console.log('App js');
 
 function App() {
-  const [inputValue, setInputValue] = useState(0);
+  const [inputValue2, setInputValue2] = useState();
+  const [inputValue1, setInputValue1] = useState();
   const printValue = () => {
-    console.log('printValue', inputValue)
+    // console.log('printValue', inputValue)
   }
   // let inputValue = 5 ;
   return (
     <div>
     <h1>my app first  react</h1>
-    <div> <input value={inputValue} onChange={(e) =>  { setInputValue(e.target.value) 
-       console.log('inputValue',inputValue);} } type='number' placeholder = 'Enter no' ></input> </div>
-  <button onClick={printValue}>print</button>
-    <p>2 this is paragraph 1 { inputValue }</p>
+    <div> <input
+     value={inputValue2}
+      onChange={(e) =>  {
+         setInputValue2(e.target.value) 
+      //  console.log('inputValue',inputValue);
+       } } type='number' placeholder = 'Enter no 2' ></input> </div>
 
-    <a href = "https://www.google.com/">google</a>
-      <Add a = '2' b = '2' ></Add>
-      <Sub a = '2' b = '2' ></Sub>
-</div>
+  <div>
+    {/* <h1>my app first  react</h1> */}
+    <div> <input
+     value={inputValue1}
+      onChange={(e) =>  {
+         setInputValue1(e.target.value) 
+      //  console.log('inputValue',inputValue);
+       } } type='number' placeholder = 'Enter no 1' ></input> </div>
+    <p>2 this is paragraph 1 {inputValue1} {inputValue2} </p>
+
+  <button onClick={printValue}>print</button>
+  {inputValue1 && inputValue2 ? <Add a = {inputValue1} b={inputValue2} > </Add>: ''}
+    
+
+    
+      
+      
+  </div></div>
   );
 }
 export default App;
