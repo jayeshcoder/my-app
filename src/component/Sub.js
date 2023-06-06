@@ -1,7 +1,7 @@
-export const Sub = () => {
-    console.log("3-2 = " , 3-2)
+export const Sub = (a,b) => {
+    console.log("a-b = " , a-b)
 };
 
-export const Multi = () => {
-    console.log("3*2 = " , 3*2)
+export const Multi = (a,b) => {
+    console.log("a*b = " , a*b)
 };
